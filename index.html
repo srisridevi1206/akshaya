@@ -104,6 +104,141 @@
       content: "■";
       color: #ffff00;
     }
+
+    .photo-section {
+      margin: 40px auto 0 auto;
+      max-width: 900px;
+      background: #181818;
+      border-radius: 14px;
+      box-shadow: 0 0 24px rgba(229,9,20,0.18);
+      padding: 28px 18px 18px 18px;
+    }
+    .photo-section-title {
+      text-align: center;
+      font-size: 1.7rem;
+      color: #ff3366;
+      margin-bottom: 18px;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+    }
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
+      justify-items: center;
+    }
+    .photo-gallery img {
+      width: 100%;
+      max-width: 180px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: #222;
+    }
+    .photo-gallery img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 4px 20px rgba(255,51,102,0.25);
+    }
+
+    .scratch-section {
+      margin: 40px auto 0 auto;
+      max-width: 400px;
+      background: #181818;
+      border-radius: 14px;
+      box-shadow: 0 0 24px rgba(229,9,20,0.18);
+      padding: 24px 18px 18px 18px;
+      text-align: center;
+    }
+    .scratch-title {
+      font-size: 1.3rem;
+      color: #ffcc00;
+      margin-bottom: 14px;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+    }
+    .scratch-container {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      aspect-ratio: 1/1;
+    }
+    .scratch-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      background: #222;
+    }
+    #scratch-canvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      background: transparent;
+      z-index: 2;
+    }
+
+    .funny-videos-section {
+      margin: 40px auto 0 auto;
+      max-width: 900px;
+      background: #181818;
+      border-radius: 14px;
+      box-shadow: 0 0 24px rgba(229,9,20,0.18);
+      padding: 28px 18px 18px 18px;
+    }
+    .funny-videos-section .title {
+      text-align: center;
+      font-size: 1.7rem;
+      color: #ff3366;
+      margin-bottom: 18px;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+    }
+    .funny-videos-section video {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+      background: #222;
+    }
+
+    .more-photos-section {
+      margin: 40px auto 0 auto;
+      max-width: 900px;
+      background: #181818;
+      border-radius: 14px;
+      box-shadow: 0 0 24px rgba(229,9,20,0.18);
+      padding: 28px 18px 18px 18px;
+    }
+    .more-photos-section .title {
+      text-align: center;
+      font-size: 1.7rem;
+      color: #ff3366;
+      margin-bottom: 18px;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+    }
+    .more-photos-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
+      justify-items: center;
+    }
+    .more-photos-gallery img {
+      width: 100%;
+      max-width: 180px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+      background: #222;
+    }
   </style>
 </head>
 <body>
@@ -156,6 +291,114 @@
     <span class="highlight">I’d pick YOU every single time.</span></p>
   </div>
 </div>
+
+<div class="photo-section">
+  <div class="photo-section-title">Akshaya & Friends Gallery</div>
+  <div class="photo-gallery">
+    <img src="ak1.jpg" alt="Akshaya 1">
+    <img src="ak2.jpg" alt="Akshaya 2">
+    <img src="ak3.jpg" alt="Akshaya 3">
+    <img src="ak4.jpg" alt="Akshaya 4">
+    <img src="ak5.jpg" alt="Akshaya 5">
+    <img src="ak6.jpg" alt="Akshaya 6">
+    <img src="ak7.jpg" alt="Akshaya 7">
+    <img src="ak11.jpg" alt="Akshaya 8">
+    <img src="ak9.jpg" alt="Akshaya 9">
+    <img src="ak12.jpg" alt="Akshaya 10">
+
+  </div>
+</div>
+
+<div class="scratch-section">
+  <div class="scratch-title">🎁 Scratch to Reveal Akshaya's Secret Photo!</div>
+  <div class="scratch-container">
+    <img src="ak10.jpg" alt="Secret Akshaya" class="scratch-img" id="secret-photo">
+    <canvas id="scratch-canvas"></canvas>
+  </div>
+</div>
+
+<div class="funny-videos-section">
+  <div class="title">Akshaya's Memories</div>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; justify-items:center;">
+    <video controls style="width:100%; max-width:320px; border-radius:10px; background:#222;">
+      <source src="akv8.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls style="width:100%; max-width:320px; border-radius:10px; background:#222;">
+      <source src="akv9.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- Add more videos as needed -->
+  </div>
+</div>
+
+<div class="more-photos-section">
+  <div class="title">More Memories with Akshaya</div>
+  <div class="more-photos-gallery">
+    <img src="ak13.jpg" alt="Akshaya More 1">
+    <img src="ak14.jpg" alt="Akshaya More 2">
+    <img src="ak15.jpg" alt="Akshaya More 3">
+    <img src="ak16.jpg" alt="Akshaya More 4">
+    <img src="ak17.jpg" alt="Akshaya More 5">
+    <!-- Add more images as needed -->
+  </div>
+</div>
+
+<script>
+  // Scratch card logic
+  window.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('scratch-canvas');
+    const container = document.querySelector('.scratch-container');
+    const img = document.getElementById('secret-photo');
+    function resizeCanvas() {
+      canvas.width = container.offsetWidth;
+      canvas.height = container.offsetHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const ctx = canvas.getContext('2d');
+    function fillCover() {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.fillStyle = '#888';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.font = 'bold 1.2rem Rubik, sans-serif';
+      ctx.fillStyle = '#fff';
+      ctx.textAlign = 'center';
+      ctx.fillText('Scratch Here!', canvas.width/2, canvas.height/2);
+    }
+    fillCover();
+
+    let isDrawing = false;
+    function getPointerPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+      const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+      return {x, y};
+    }
+    function scratch(e) {
+      if (!isDrawing) return;
+      e.preventDefault();
+      ctx.globalCompositeOperation = 'destination-out';
+      const {x, y} = getPointerPos(e);
+      ctx.beginPath();
+      ctx.arc(x, y, 24, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+    canvas.addEventListener('mousedown', function(e) { isDrawing = true; scratch(e); });
+    canvas.addEventListener('touchstart', function(e) { isDrawing = true; scratch(e); });
+    canvas.addEventListener('mousemove', scratch);
+    canvas.addEventListener('touchmove', scratch);
+    window.addEventListener('mouseup', function() { isDrawing = false; });
+    window.addEventListener('touchend', function() { isDrawing = false; });
+
+    // Redraw cover on resize
+    window.addEventListener('resize', function() {
+      fillCover();
+    });
+  });
+</script>
 
 <div class="footer">
   Created with ❤ for Akshaya by her co-player
